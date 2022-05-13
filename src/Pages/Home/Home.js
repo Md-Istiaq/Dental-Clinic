@@ -10,7 +10,7 @@ import WelcomeBanner from './WelcomeBanner/WelcomeBanner';
 import Footer from './Footer/Footer';
 const Home = () => {
     return (
-        <div className='lg:px-12'>
+        <div>
             <WelcomeBanner></WelcomeBanner>
             <Banner></Banner>
             <Info></Info>

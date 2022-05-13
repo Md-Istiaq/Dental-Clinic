@@ -1,0 +1,57 @@
+[
+    {
+      "img":"https://as1.ftcdn.net/v2/jpg/01/39/27/58/1000_F_139275811_TJBc4B8oWVzPNL4wFrNwcONiESx93gEN.jpg",
+      "name": "Teeth Orthodontics",
+      "slots": [
+        "08.00 AM - 08.30 AM",
+        "08.30 AM - 09.00 AM",
+        "09.00 AM - 9.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM"
+      ]
+    },
+    {
+      "name": "Cosmetic Dentistry",
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRChvGL-B0NzdYar0isPbYZrn4YRvfBl_U77fd_hfbLT9P3qUjkuhHExordYhYD4w0wfyk&usqp=CAU",
+      "slots": [
+        "09.00 AM - 9.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM"
+      ]
+    },
+    {
+      "name": "Teeth Cleaning",
+      "img":"https://www.clipartkey.com/mpngs/m/228-2281408_teeth-cleaning-vector.png",
+      "slots": []
+    },
+    {
+      "img":"https://image.shutterstock.com/image-vector/teeth-before-after-multiple-caries-260nw-2119423784.jpg",
+      "name": "Cavity Protection",
+      "slots": [
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM"
+      ]
+    },
+    {
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNmz_SRynpreYdFE1XuD27PUpqXzMkY2vBXyaVpm2fkqssjEtpeyos9ZCg1-qAMS6HNWE&usqp=CAU",
+      "name": "Pediatric Dental",
+      "slots": [
+        "08.30 AM - 09.00 AM",
+        "09.00 AM - 9.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM"
+      ]
+    },
+    {
+      "img":"https://previews.123rf.com/images/pogorelovaolga/pogorelovaolga1911/pogorelovaolga191100006/135692891-tooth-decayed-tooth-is-removed-with-tweezers-in-the-oral-cavity-concept-of-children-s-dentistry-kawa.jpg",
+      "name": "Oral Surgery",
+      "slots": [
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM"
+      ]
+    }
+  ]

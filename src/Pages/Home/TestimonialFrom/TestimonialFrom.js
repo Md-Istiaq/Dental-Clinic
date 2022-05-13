@@ -14,26 +14,26 @@ const TestimonialFrom = () => {
       <div class="card-body">
         <div class="form-control">
           <label class="label">
-            <span class="label-text text-white">Email</span>
+            <span class="label-text text-white text-xl">Email</span>
           </label>
           <input type="text" placeholder="email" class="input input-bordered input-filed" />
         </div>
         <div class="form-control">
           <label class="label">
-            <span class="label-text text-white">Password</span>
+            <span class="label-text text-white text-xl">Password</span>
 
           </label>
           <input type="text" placeholder="password" class="input input-bordered input-filed" />
           <div class="form-control">
           <label class="label">
-            <span class="label-text text-white">Phone Number</span>
+            <span class="label-text text-white text-xl">Phone Number</span>
           </label>
           <input type="text" placeholder="Phone Number" class="input input-bordered input-filed" />
         </div>
 
           <textarea placeholder='Your massage' name="massage" id="" cols="30" rows="08" className='input-filed mt-10 rounded-md'></textarea>
           <label class="label">
-            <a href="#" class="label-text-alt link link-hover text-white">Forgot password?</a>
+            <a href="#" class="label-text-alt link link-hover text-white text-xl">Forgot password?</a>
           </label>
         </div>
         <div class="form-control mt-6">

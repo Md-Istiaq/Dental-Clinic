@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Footer.css'
 const Footer = () => {
     return (
-        <footer class="footer p-10 bg-neutral text-neutral-content">
+        <footer class="footer p-10 footer-image text-white">
   <div>
     <span class="footer-title">Services</span> 
     <a class="link link-hover">Branding</a>
