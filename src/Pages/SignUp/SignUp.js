@@ -1,42 +1,44 @@
 import React from 'react';
+import {useSignInWithGoogle} from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword ,useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../_firebase.init';
-import {Link , useLocation, useNavigate} from 'react-router-dom'
-import {useSignInWithGoogle} from 'react-firebase-hooks/auth'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import './Login.css'
-const Login = () => {
+import {Link, useNavigate} from 'react-router-dom'
+import { async } from '@firebase/util';
+const SignUp = () => {
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth);
       const Navigate = useNavigate()
-      const location = useLocation()
-      let from = location.state?.from?.pathname || "/";
-      let Error;
+      const [updateProfile, updating, Uerror] = useUpdateProfile(auth);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data =>{ 
+    const onSubmit = async data =>{ 
         console.log(data)
-        signInWithEmailAndPassword(data.email,data.password)
-        console.log(data.email , data.password)
+       await createUserWithEmailAndPassword(data.email,data.password)
+       await updateProfile(data.name)
+       Navigate('/appointment')
     };
     if(Gloading || loading){
         return <button class="btn btn-square loading">Loading</button>
     }
     if(Gerror || error){
-        Error=<p className='text-danger'>{Gerror?.message || error?.message}</p>
-    }
-    if(Guser || user){
-      Navigate (from , {replace:true})
+        
     }
     return (
         <div className='LogIn hero min-h-screen bg-base-200'>
     <form onSubmit={handleSubmit(onSubmit)} class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 LogIn-filed">
-    <h1 className='text-3xl mx-auto text-primary'>Log In</h1>
+    <h1 className='text-3xl mx-auto text-primary'>Register</h1>
       <div class="card-body">
+      <div class="form-control">
+          <label class="label">
+            <span class="label-text text-white">Name</span>
+          </label>
+          <input type="text" placeholder="Enter you Name" class="input input-bordered LogIn-filed" {...register("name", { required: true })}  />
+        </div>
         <div class="form-control">
           <label class="label">
             <span class="label-text text-white">Email</span>
@@ -52,9 +54,8 @@ const Login = () => {
             <a href="#" class="label-text-alt link link-hover text-white">Forgot password?</a>
           </label>
         </div>
-        <p><small>New to Dental Clinic? <Link to='/signup' className='link hover:text-primary'>Create an account</Link></small> </p>
-        <input type="submit" value="Log In" class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mt-5" />
-        {Error}
+        <p><small>Already have an account? <Link to='/login' className='link hover:text-primary'>Go to login</Link></small> </p>
+        <input type="submit" value="Sign Up" class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mt-5" />
       </div>
       <p>---------------------------or---------------------------</p>
       <button onClick={() => signInWithGoogle()} class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mb-5">Continue With Google</button>
@@ -63,4 +64,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
