@@ -8,50 +8,127 @@
         "09.00 AM - 9.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
       ]
     },
     {
       "name": "Cosmetic Dentistry",
       "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRChvGL-B0NzdYar0isPbYZrn4YRvfBl_U77fd_hfbLT9P3qUjkuhHExordYhYD4w0wfyk&usqp=CAU",
       "slots": [
+        "08.00 AM - 08.30 AM",
+        "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
       ]
     },
     {
       "name": "Teeth Cleaning",
       "img":"https://www.clipartkey.com/mpngs/m/228-2281408_teeth-cleaning-vector.png",
-      "slots": []
+      "slots": [
+        "08.00 AM - 08.30 AM",
+        "08.30 AM - 09.00 AM",
+        "09.00 AM - 9.30 AM",
+        "09.30 AM - 10.00 AM",
+        "10.00 AM - 10.30 AM",
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
+      ]
     },
     {
       "img":"https://image.shutterstock.com/image-vector/teeth-before-after-multiple-caries-260nw-2119423784.jpg",
       "name": "Cavity Protection",
       "slots": [
+        "08.00 AM - 08.30 AM",
+        "08.30 AM - 09.00 AM",
+        "09.00 AM - 9.30 AM",
+        "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
       ]
     },
     {
       "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNmz_SRynpreYdFE1XuD27PUpqXzMkY2vBXyaVpm2fkqssjEtpeyos9ZCg1-qAMS6HNWE&usqp=CAU",
       "name": "Pediatric Dental",
       "slots": [
+        "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
       ]
     },
     {
       "img":"https://previews.123rf.com/images/pogorelovaolga/pogorelovaolga1911/pogorelovaolga191100006/135692891-tooth-decayed-tooth-is-removed-with-tweezers-in-the-oral-cavity-concept-of-children-s-dentistry-kawa.jpg",
       "name": "Oral Surgery",
       "slots": [
+        "08.00 AM - 08.30 AM",
+        "08.30 AM - 09.00 AM",
+        "09.00 AM - 9.30 AM",
         "09.30 AM - 10.00 AM",
         "10.00 AM - 10.30 AM",
-        "10.30 AM - 11.00 AM"
+        "10.30 AM - 11.00 AM",
+        "11.00 AM - 11.30 AM",
+        "11.30 AM - 12.00 PM",
+        "12.30 PM - 12.30 PM",
+        "12.30 PM - 01.00 PM",
+        "01.00 PM - 01.30 PM",
+        "01.30 PM - 02.00 PM",
+        "02.00 PM - 02.30 PM",
+        "02.30 PM - 03.00 PM",
+        "03.00 PM - 03.30 PM",
+        "03.30 PM - 04.00 PM"
       ]
     }
   ]

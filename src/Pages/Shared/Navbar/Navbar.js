@@ -14,6 +14,9 @@ const Navbar = () => {
         <li class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1"><Link to="/review">Review</Link></li>
         <li class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1"><Link to="/about">About</Link></li>
         <li class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1"><Link to="/contact">Contact</Link></li>
+        {
+          user && <li class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1"><Link to="/dashboard">Dashboard</Link></li>
+        }
         <li class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1">{user ? <button class="btn btn-primary uppercase font-bold bg-gradient-to-r from-accent to-primary hover:from-pink-500 hover:to-yellow-500 rounded-3xl hover:text-primary mr-1" onClick={LogOut}>Sign Out</button> : <Link to="/login">Log in</Link>}</li>
         </>
     return (
@@ -33,6 +36,11 @@ const Navbar = () => {
     <ul class="menu menu-horizontal p-0">
         {menuItems}
     </ul>
+  </div>
+  <div className="navbar-end">
+  <label tabindex="1" for="my-drawer-2"  class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
   </div>
 </div>
     );

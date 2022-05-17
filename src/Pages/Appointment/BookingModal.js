@@ -1,11 +1,43 @@
 import React from 'react';
 import { format } from 'date-fns';
-const BookingModal = ({date,tretment ,setTretment}) => {
+import {useAuthState} from 'react-firebase-hooks/auth'
+import auth from '../../_firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+const BookingModal = ({date,tretment ,setTretment ,refetch}) => {
+  const [ user] = useAuthState(auth)
+  const formetedDate = format(date, 'PP')
     const handleBooking = e =>{
         e.preventDefault()
         const slot = e.target.slot.value
-        console.log(slot)
-        setTretment(null)
+        console.log(user.displayName)
+        const booking = {
+          tretmentId :tretment._id,
+          tretment: tretment.name,
+          date: formetedDate,
+          slot,
+          patient:user.email,
+          patientName : e.target.name.value,
+          phone: e.target.phone.value
+        }
+        fetch('http://localhost:5000/booking' , {
+          method:"POST",
+          headers:{
+            'content-type' :'application/json'
+          },
+          body:JSON.stringify(booking)
+
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.success){
+            alert(" tretment booked")
+          }
+          else{
+            alert("Already Booked")
+          }
+          refetch()
+          setTretment(null)
+        })
     }
     return (
         <div>
@@ -21,13 +53,14 @@ const BookingModal = ({date,tretment ,setTretment}) => {
                  tretment.slots.map(slot =><option value={slot}>{slot}</option>)
                 }
              </select>
-            <input type="text" placeholder="your name" name='name' class="input input-bordered w-full max-w-xs" />
-            <input type="email" placeholder="E-mail" name='email' class="input input-bordered w-full max-w-xs" />
+            <input type="text"  placeholder='your Name' name='name' class="input input-bordered w-full max-w-xs" />
+            <input type="email" value={user.email} disabled name='email' class="input input-bordered w-full max-w-xs" />
             <input type="text" placeholder="Phone number" name='phone' class="input input-bordered w-full max-w-xs" />
             <input type="submit" value="Submit" class="btn btn-primary w-full max-w-xs" />
             </form>
           </div>
         </div>
+        <ToastContainer/>
         </div>
     );
 };
