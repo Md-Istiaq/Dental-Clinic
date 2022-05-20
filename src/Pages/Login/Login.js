@@ -5,6 +5,7 @@ import {useSignInWithGoogle} from 'react-firebase-hooks/auth'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import './Login.css'
+import useToken from '../../hooks/useToken';
 const Login = () => {
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
     const [
@@ -15,6 +16,7 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
       const Navigate = useNavigate()
       const location = useLocation()
+      const [ token] = useToken(Guser || user)
       let from = location.state?.from?.pathname || "/";
       let Error;
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -29,7 +31,7 @@ const Login = () => {
     if(Gerror || error){
         Error=<p className='text-danger'>{Gerror?.message || error?.message}</p>
     }
-    if(Guser || user){
+    if(token){
       Navigate (from , {replace:true})
     }
     return (

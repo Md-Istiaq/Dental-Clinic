@@ -30,7 +30,7 @@ const BookingModal = ({date,tretment ,setTretment ,refetch}) => {
         .then(res => res.json())
         .then(data => {
           if(data.success){
-            alert(" tretment booked")
+           alert(" tretment booked")
           }
           else{
             alert("Already Booked")

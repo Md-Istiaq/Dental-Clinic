@@ -5,6 +5,7 @@ import auth from '../../_firebase.init';
 import { useForm } from "react-hook-form";
 import {Link, useNavigate} from 'react-router-dom'
 import { async } from '@firebase/util';
+import useToken from '../../hooks/useToken';
 const SignUp = () => {
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
     const [
@@ -15,18 +16,23 @@ const SignUp = () => {
       ] = useCreateUserWithEmailAndPassword(auth);
       const Navigate = useNavigate()
       const [updateProfile, updating, Uerror] = useUpdateProfile(auth);
+
+      const [token] = useToken(Guser || user)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = async data =>{ 
         console.log(data)
        await createUserWithEmailAndPassword(data.email,data.password)
        await updateProfile(data.name)
-       Navigate('/appointment')
+      //  Navigate('/appointment')
     };
     if(Gloading || loading){
         return <button class="btn btn-square loading">Loading</button>
     }
     if(Gerror || error){
-        
+        alert(Gerror || error)
+    }
+    if(token){
+      Navigate('/appointment')
     }
     return (
         <div className='LogIn hero min-h-screen bg-base-200'>

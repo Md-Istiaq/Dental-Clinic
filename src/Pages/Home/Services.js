@@ -24,6 +24,27 @@ const Services = () => {
             img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3USwUp-fggSzTfyQk2SZkSuGA09Sd4bKi8ufOhlwddI8_ypONPh_NY5wsfxvHJKOhUbg&usqp=CAU'
 
         },
+        {
+            _id:4,
+            name:"teeth Orthodontics",
+            description:"Orthodontics is a dentistry specialty that addresses the diagnosis, prevention, and correction of mal-positioned teeth and jaws, and misaligned bite patterns. It may also address the modification of facial growth, known as dentofacial orthopedics. Abnormal alignment of the teeth and jaws is very common",
+            img:'https://img.freepik.com/free-vector/doctor-orthodontist-examining-teeth-with-braces-vector-illustration-dental-brackets-orthodontics-bit_103044-1003.jpg?w=2000'
+
+        },
+        {
+            _id:5,
+            name:"Oral Surgery",
+            description:"Oral surgery is a broad term for any operation performed on your teeth, gums, jaw or surrounding oral and facial structures. It includes a wide range of procedures, including teeth extractions, dental bone grafts, periodontal (gum) grafts and corrective jaw surgery.",
+            img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgrenS03xTneWISJGEcDLWCqTret44qC3f61Er4hd_X3M4iMkrfnoXSd4Y3D9taSBpuQg&usqp=CAU'
+
+        },
+        {
+            _id:6,
+            name:"Pediatric Dental",
+            description:"​Pediatric dentists are dedicated to the oral health of children from infancy through the teen years. They have the experience and qualifications to care for a child’s teeth, gums, and mouth throughout the various stages of childhood.",
+            img:'https://media.istockphoto.com/vectors/big-tooth-with-small-dentists-little-children-in-medical-uniforms-vector-id1308431402?b=1&k=20&m=1308431402&s=170667a&w=0&h=tQ4JD6h0gV-vQg6dy_N0P9TmrWqJq2I8YiZMGlfdubI='
+
+        },
     ]
     return (
         <div className='my-30'>
